@@ -14,8 +14,8 @@ client.on('ready', () => {
 client.on('message', async message => {
 
     console.log(message.content);
-    if(message.content === "hola"){
-        message.reply('Welcome!');
+    if(message.content === 'buen dia'){
+        message.reply('Muy buen día! Bienvenid@ a Owl house');
     }
     if(message.content === "hello"){
         message.channel.send(`Hi, welcome to the house ${message.author}!`);
@@ -29,11 +29,24 @@ client.on('message', async message => {
         message.channel.send("https://www.linkedin.com/in/agustina-prats-1157a916")
     }
 
-    if(message.content === 'Hi'){
+    if(message.content.includes('portfolio')) {
+        message.channel.send("https://agusprats.github.io/agustinaPrats");
+        message.channel.send("https://www.linkedin.com/in/agustina-prats-1157a916")
+    }
+
+    if(message.content === 'Hola' ){
         const embed = new MessageEmbed()
-        .setTitle('Welcome to Owl Chat')
+        .setTitle('Bienvenid@ a Owl Chat')
         .setColor('DARK_VIVID_PINK')
-        .addField('How are you my friend?', "I hope you're well!")
+        .addField('Hola cómo estás?', "Espero que super!")
+        .setAuthor('The Owl', 'https://media1.tenor.com/images/472c194c10d6d6d7eeed3a61e62dbf06/tenor.gif?itemid=12429723');
+    message.channel.send(embed);
+    }
+    if(message.content === 'Buenas' ){
+        const embed = new MessageEmbed()
+        .setTitle('Bienvenid@ a Owl Chat')
+        .setColor('DARK_VIVID_PINK')
+        .addField('Muy buenas, cómo estás?', "Espero que super!")
         .setAuthor('The Owl', 'https://media1.tenor.com/images/472c194c10d6d6d7eeed3a61e62dbf06/tenor.gif?itemid=12429723');
     message.channel.send(embed);
     }
